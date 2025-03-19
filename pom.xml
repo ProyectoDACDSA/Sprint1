@@ -1,26 +1,55 @@
-<dependencies>
-    <!-- Spring Boot Web para manejar peticiones HTTP -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <!-- Cliente HTTP para consumir APIs externas -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-webflux</artifactId>
-    </dependency>
+    <modelVersion>4.0.0</modelVersion>
 
-    <!-- Jackson para manejar JSON -->
-    <dependency>
-        <groupId>com.fasterxml.jackson.core</groupId>
-        <artifactId>jackson-databind</artifactId>
-    </dependency>
-
-    <!-- Spring Boot Starter Test -->
-    <dependency>
+    <!-- Agrega el parent de Spring Boot para gestionar versiones -->
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.7</version> <!-- o la versión que prefieras -->
+        <relativePath/> <!-- busca el parent en el repositorio -->
+    </parent>
+
+    <groupId>org.example</groupId>
+    <artifactId>nombre-de-tu-proyecto</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>nombre-de-tu-proyecto</name>
+
+    <dependencies>
+        <!-- Spring Boot Web para manejar peticiones HTTP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Cliente HTTP para consumir APIs externas -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- Jackson para manejar JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
